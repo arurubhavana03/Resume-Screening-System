@@ -1,19 +1,16 @@
 <!DOCTYPE html>
-
 <html>
-
 <head>
-
-<title>ATS Result</title>
-
+    <title>Screening Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
-
 <body>
+    <h2>Screening Result</h2>
+    <h3>Match Score: {{ score }}%</h3>
+    
+    <h4>Extracted Resume Content:</h4>
+    <p>{{ resume_text }}</p>
 
-<h1>Resume Uploaded Successfully</h1>
-
-<h2>ATS Score : {{score}} %</h2>
-
+    <a href="/">Upload Another Resume</a>
 </body>
-
 </html>
