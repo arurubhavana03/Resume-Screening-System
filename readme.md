@@ -1,20 +1,27 @@
-# Resume Screening System
+# AI Resume Screening & ATS System
 
-An AI/ML-based web application that parses resume PDFs, extracts text, and matches candidate profiles against job descriptions to provide automated ATS scoring.
+An intelligent web application that evaluates candidate resumes against job descriptions using Natural Language Processing (NLP) to compute match percentages and highlight missing skills.
+
+---
 
 ## Features
-- **PDF Resume Parsing:** Extracts plain text from uploaded PDF resumes.
-- **ATS Keyword Matching:** Calculates match percentage based on required skills and job description keywords.
-- **Web Interface:** Built with Flask, HTML, and CSS.
+- **PDF Text Extraction:** Parses text from uploaded resume files.
+- **NLP Scoring Engine:** Uses TF-IDF Vectorization and Cosine Similarity (`scikit-learn`) to calculate semantic match scores.
+- **Skill Gap Analysis:** Extracts crucial missing keywords from the job description to help candidates optimize their resumes.
+- **Modern Responsive UI:** Built with Flask and Bootstrap 5.
+
+---
 
 ## Tech Stack
-- **Backend:** Python, Flask
-- **PDF Extraction:** PyPDF2
-- **Version Control:** Git, GitHub
+- **Backend:** Python, Flask, PyPDF2
+- **Machine Learning / NLP:** scikit-learn (TF-IDF, Cosine Similarity)
+- **Frontend:** HTML5, CSS3, Bootstrap 5
+- **Deployment:** Render
 
-## How to Run Locally
+---
 
-1. Clone the repository:
-   ```bash
-   git clone [https://github.com/arurubhavana03/Resume-Screening-System.git](https://github.com/arurubhavana03/Resume-Screening-System.git)
-   cd Resume-Screening-System
+## Team Contributions
+- **Bhavana (Team Lead):** Core Flask Architecture, PyPDF2 Integration, Render Deployment
+- **drakshayani 1:** NLP & Cosine Similarity Scoring Module (`ats.py`)
+- **salama banu 2:** Frontend & UI/UX Design (`index.html`, `result.html`)
+- **gadhipakula reshmaa3:** Keyword & Missing Skill Analytics Module (`extract_missing_skills`)
