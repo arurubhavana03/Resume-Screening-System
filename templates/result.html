@@ -1,16 +1,16 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Screening Result</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-</head>
-<body>
-    <h2>Screening Result</h2>
-    <h3>Match Score: {{ score }}%</h3>
-    
-    <h4>Extracted Resume Content:</h4>
-    <p>{{ resume_text }}</p>
-
-    <a href="/">Upload Another Resume</a>
-</body>
-</html>
+<!-- Missing Skills Card -->
+                <div class="card shadow-sm border-0 rounded-4 mb-4">
+                    <div class="card-body p-4">
+                        <h4 class="fw-bold text-danger mb-3">Key Missing Keywords / Skills</h4>
+                        <p class="text-muted small">Consider adding these relevant terms from the job description to improve your match score:</p>
+                        <div>
+                            {% if missing_skills %}
+                                {% for skill in missing_skills %}
+                                    <span class="badge bg-warning text-dark me-2 mb-2 p-2 fs-6">{{ skill }}</span>
+                                {% endfor %}
+                            {% else %}
+                                <p class="text-success fw-bold">Great job! No major key terms appear to be missing.</p>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
