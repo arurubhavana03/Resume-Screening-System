@@ -1,1 +1,17 @@
-print("Resume Screening System")
+from flask import Flask, render_template, request
+
+app = Flask(__name__)
+
+@app.route("/")
+def home():
+    return render_template("index.html")
+
+@app.route("/upload", methods=["POST"])
+def upload():
+
+    score = 85
+
+    return render_template("result.html", score=score)
+
+if __name__ == "__main__":
+    app.run(debug=True)
